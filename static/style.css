@@ -1,0 +1,25 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+}
+button.available {
+  background-color: #4CAF50;
+  color: white;
+  margin: 2px;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+button.occupied {
+  background-color: #ccc;
+  color: #666;
+  margin: 2px;
+  padding: 10px 15px;
+  border: none;
+  cursor: not-allowed;
+}
+#seats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+}
