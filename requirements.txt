@@ -4,3 +4,4 @@ eventlet
 pillow
 flask-login
 qrcode
+gunicorn
