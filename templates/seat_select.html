@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <title>線上選位系統</title>
 <link rel="stylesheet" href="/static/style.css" />
-<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
 </head>
 <body>
   <h2>歡迎，{{ name }}！</h2>
@@ -19,6 +19,15 @@
 
 <script>
   const socket = io();
+
+socket.on('connect', () => {
+  console.log("✅ SocketIO 已連線");
+});
+
+socket.on('disconnect', () => {
+  console.log("❌ SocketIO 已斷線");
+});
+
   let mySeat = null;
 
   function renderSeats(seats) {
